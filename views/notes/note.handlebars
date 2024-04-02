@@ -1,0 +1,20 @@
+
+
+<section class="cardInner">
+
+    <article>
+        {{#if payload}}
+
+         <div class="card">
+            <h2> {{payload.title}} </h2>
+            <p> {{payload.category}} </p>
+            <p class="desc"> {{payload.description}} </p>
+         </div>
+        {{else}}
+        <h1>no notes available</h1>
+        {{/if}}
+    </article>
+    
+</section>
+
+ {{!-- <a href="/employee/edit/{{this._id}}">edit</a></span> --}}

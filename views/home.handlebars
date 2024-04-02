@@ -1,0 +1,54 @@
+<section class="home">
+        <h2>List of Notes</h2>
+    <article>
+        {{#each payload}}
+        <div class="card">
+            <header>
+
+            <h2>{{this.title}}</h2>
+            </header>
+
+            <main>
+                <p>{{this.category}}</p>
+            </main>
+            <footer>
+                <p> {{this.description}} </p>
+                <p> {{this.createdAt}} </p>
+                <main class="btn-group">
+                    <span class="view_more">
+                        <a href="/note/{{this._id}}">view more</a>
+                    </span>
+                </main>
+                <main class="btn-group">
+                    <span class="view_more">
+                        <a href="/note/edit/{{this._id}}">edit</a>
+                    </span>
+                </main>
+                {{!-- <main class="btn-group">
+                    <span class="view_more">
+                        <a href="/note/edit/{{this._id}}">delete</a>
+                    </span>
+                </main> --}}
+
+                  <span class="view_more">
+                       
+                <form method="POST" action="/note/delete/{{this._id}}?_method=DELETE">
+
+                <input type="hidden" name="_method" value="DELETE" />
+                <button type="submit" >Delete </button>
+              </form>
+                    </span>
+               
+                
+                 
+            </footer>
+        </div>
+
+    
+
+        {{else}}
+        <h1>no note found here</h1>
+
+        {{/each}}
+    </article>
+</section>

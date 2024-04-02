@@ -1,0 +1,33 @@
+<section class="note">
+    <article>
+        <h2>CREATE NOTE</h2>
+
+        <form action="/note/create-note" method="post">
+        
+        <div class="from-group">
+            <label for="title">Note Title</label>
+            <input type="text" name="title" id="title" required placeholder="enter title">
+        </div>
+        <div class="from-group">
+            <label for="title">Note Category</label>
+            <select name="category" id="category">
+                <option value="frontend">frontend</option>
+                <option value="backend">backend</option>
+                <option value="database">database</option>
+                <option value="cloud_computing">cloud computing</option>
+                <option value="ml">machine learning</option>
+            </select>
+        </div>
+
+        <div class="from-group">
+            <label for="description">
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <button>create note</button>
+        </div>
+        </form>
+    </article>
+</section>
